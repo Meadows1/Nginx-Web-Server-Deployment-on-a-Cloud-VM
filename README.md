@@ -116,16 +116,16 @@ systemctl status nginx
 
 ### nginx Welcome Page
 
-![nginx Page](screenshots/nginx-page.png)
+![nginx Page](screenshots/nginx-browser.png)
 
 ---
 
 ## Future Improvements:
 
--Configuring a domain name using DNS
--Enabling HTTPS with Let's Encrypt
--Deploying a static website
--Configuring firewall rules
+- Configuring a domain name using DNS
+- Enabling HTTPS with Let's Encrypt
+- Deploying a static website
+- Configuring firewall rules
 
 ---
 
