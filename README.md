@@ -38,7 +38,7 @@ Default nginx Web Page
 1. Created a cloud server (Droplet) in DigitalOcean
 2. Connected to the server using SSH
 3. Updated the server packages
-4. Installed nginx
+4. Installed nginx web server
 5. Started the nginx service
 6. Verified nginx status
 7. Accessed the web server via the public IP address
