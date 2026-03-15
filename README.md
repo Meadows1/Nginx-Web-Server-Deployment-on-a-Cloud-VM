@@ -1,19 +1,34 @@
-# Project 1 – Public Linux Web Server
+# Nginx Web Server Deployment on a Cloud VM
 
 ## Overview
 
-This project demonstrates deploying a public Linux web server in the cloud using Ubuntu and nginx.
+This project demonstrates how to deploy a basic public web server on a cloud virtual machine.
 
-The server hosts the default nginx webpage and is accessible through a public IP address.
+The workflow included provisioning a Linux server in Digital Ocean, connecting to it via SSH, installing the nginx web server, and verifying that the server was accissible through its public IP address.
 
 ---
 
 ## Infrastructure Used
 
-Cloud Provider: DigitalOcean  
+Cloud Provider: DigitalOcean Cloud
 Server Type: Droplet  
 Operating System: Ubuntu 24.04 LTS  
 Web Server: nginx
+Access Method: SSH via Linux command line
+
+---
+
+## Architecture
+
+Browser  
+↓  
+Public Internet  
+↓  
+DigitalOcean Cloud VM (Ubuntu 24.04)  
+↓  
+nginx Web Server  
+↓  
+Default nginx Web Page
 
 ---
 
@@ -25,59 +40,98 @@ Web Server: nginx
 4. Installed nginx
 5. Started the nginx service
 6. Verified nginx status
-7. Accessed the web server through the public IP address
+7. Accessed the web server via the public IP address
+
+---
+
+## Verification
+
+The nginx service was verified using the following command:
+
+systemctl status nginx.
+
+The output confirmed that the service status was: 
+
+Active: active (running)
 
 ---
 
 ## Commands Used
 
-Update packages
+Connect to the server
 
-```
+```bash
+ssh root@159.203.71.189
+
+```bash
+Update package index
+
+```bash
 sudo apt update
-```
 
+
+```bash
 Install nginx
 
-```
+```bash
 sudo apt install nginx
-```
 
+
+```bash
 Start nginx
 
-```
+```bash
 systemctl start nginx
-```
+
+```bash
 
 Check nginx status
 
-```
+```bash
 systemctl status nginx
-```
 
 ---
 
-## Result
+## Skills Demonstrated
 
-The nginx default page loads successfully when visiting the server’s public IP address.
+- Cloud infrastructure provisioning
+- SSH remote server access
+- Linux package management using apt
+- Managing services with systemd
+- Deploying a web server using nginx
+- Verifying network accessibility via a public IP  
 
-Example:
 
 ```
-http://159.203.71.189
-```
+
+## Screenshots
+
+### SSH Login
+
+![SSH Login](screenshots/droplet-login.png)
+
+### nginx Service Running
+
+![nginx Running](screenshots/nginx-running.png)
+
+### nginx Welcome Page
+
+![nginx Page](screenshots/nginx-page.png)
 
 ---
 
-## Concepts Demonstrated
+## Future Improvements:
 
-Linux server management  
-SSH remote access  
-System services  
-Web server deployment  
-Cloud infrastructure basics
+-Configuring a domain name using DNS
+-Enabling HTTPS with Let's Encrypt
+-Deploying a static website
+-Configuring firewall rules
 
 ---
+
+## Final Result
+
+The nginx web server was successfully deployed and made accessible via the public internet using the server's public IP address.
 
 ## Author
 
