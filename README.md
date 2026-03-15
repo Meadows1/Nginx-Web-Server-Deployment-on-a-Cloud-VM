@@ -18,16 +18,20 @@ Access Method: SSH via Linux command line
 
 ---
 
-## Architecture
+## Architecture Diagram
 
-Browser  
-↓  
-Public Internet  
-↓  
-DigitalOcean Cloud VM (Ubuntu 24.04)  
-↓  
-nginx Web Server  
-↓  
+Browser
+│
+▼
+Public Internet
+│
+▼
+DigitalOcean Cloud VM (Ubuntu 24.04)
+│
+▼
+nginx Web Server
+│
+▼
 Default nginx Web Page
 
 ---
