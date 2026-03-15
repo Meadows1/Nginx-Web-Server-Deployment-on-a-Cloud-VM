@@ -16,26 +16,23 @@ Operating System: Ubuntu 24.04 LTS
 Web Server: nginx
 Access Method: SSH via Linux command line
 
----
-
+```
 ## Architecture Diagram
 
 Browser
-│
-▼
+   │
+   ▼
 Public Internet
-│
-▼
+   │
+   ▼
 DigitalOcean Cloud VM (Ubuntu 24.04)
-│
-▼
+   │
+   ▼
 nginx Web Server
-│
-▼
+   │
+   ▼
 Default nginx Web Page
-
----
-
+```
 ## Deployment Steps
 
 1. Created a cloud server (Droplet) in DigitalOcean
